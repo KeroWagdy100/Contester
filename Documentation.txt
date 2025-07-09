@@ -1,4 +1,4 @@
-Simulation for the contester command
+Documentation for the contester command
 
 C:\ProblemSolving\Contests> contest new [.] [-m "ContestName"] [-t] --to f
 OR
