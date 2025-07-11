@@ -1,0 +1,37 @@
+> cf
+Default command: do whatever default command the user configured
+ex: cf contest -m "New Contest" --to Z
+
+Here's a list of the available arguments and options.
+
+Required Arguments
+-----------------
+Argument[0]: Command Name [cf]
+Argument[1]: Subcommand [
+    contest = Creates Contest,
+    goto = Navigates Between problems in current working contest,
+    quick = Creates quick problem,
+    another = Creates another solution folder for a problem
+]
+
+General Options (<contest>, <quick>, or <another>)
+-----------------
+Option[0]: [-m] takes 1 argument (contest/problem Name)
+Option[1]: [-p] takes 1 argument (contest/problem Path)
+Option[2]: [-t] Create solution files with Template Code Snippet
+Option[3]: [--fio] Creates input.txt & output.txt for each problem created
+
+Contest Only Options (for <contest> Subcommand)
+-----------------
+Option[4]: [-i] takes 1 argument (contestId)
+Option[5]: [--to] takes 1 argument (lastProblemLetter)
+Option[6]: [-n] takes 1 argument (numberOfProblemsInAContest)
+
+The <goto> subcommand (must be in a contest)
+-----------------
+Option[0]: [--next , -n] go to next problem
+           [--prev , -p] go to previous problem
+
+
+
+General Options only can be omitted when they're configured in Contest.config 
