@@ -4,7 +4,7 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser(prog="cf", description="Command for Codeforces Competitve Programmers")
 
-subparsers = parser.add_subparsers()
+subparsers = parser.add_subparsers(required=True, dest="subcommand")
 
 parser_contest = subparsers.add_parser("contest", help="Creats contest problems")
 parser_quick = subparsers.add_parser("quick", help="Create a quick problem folder")
@@ -64,5 +64,6 @@ goto_group.add_argument("--prev",
                         action="store_true"
 )
 # ---------------------
+
 
 # Import parser from this file and call parser.parse_args()

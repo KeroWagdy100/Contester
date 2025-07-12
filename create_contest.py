@@ -17,7 +17,7 @@ def create_contest(name: str,
     for i in range(0, n_problems):
         char = chr(ord('A') + i)
         create_problem(char, folder_path, templated, fio)
-    print(f"Created Contest {name} problems from A to {chr(ord('A') + n_problems-1)} successfully")
+    print(f"Created Contest \"{name}\" - problems from A to {chr(ord('A') + n_problems-1)} - successfully")
 
 if __name__ == '__main__':
     create_contest("Contest Example", "./testing", 5, True, True)
