@@ -5,6 +5,7 @@ from create_contest import create_contest
 from goto_problem import goto_problem
 import os
 import subprocess
+from pathlib import Path
 
 def main():
     args = parser.parse_args()
@@ -20,12 +21,14 @@ def main():
 
         # TODO get defaults from config
         name = args.name
-        path = args.path
+        path: Path = args.path
         templated = args.template
         fio = args.file_in_out
-        print(args)
 
         create_contest(name, path, n_problems, templated, fio)
+        
+        contest_path = path.joinpath("/" + name + "/")
+        goto_problem("A", contest_path)
         # TODO goto first problem
 
     elif args.subcommand == "quick":
@@ -34,7 +37,7 @@ def main():
         name = args.name
         path = args.path
         templated = args.template
-        fio = args.fio
+        fio = args.file_in_out
 
         create_problem(name, path, templated, fio)
         # TODO goto first problem

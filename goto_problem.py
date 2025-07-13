@@ -1,18 +1,15 @@
 import os
-import subprocess
+import pyperclip
+from pathlib import Path
 
 
-def goto_problem(problemName):
-    curr_folder = os.curdir.split(os.path.sep)[-1]
-    pth = ""
-    if (curr_folder.isalpha()):
-        pth = "../" + problemName
-    else:
-        pth = "./" + problemName
-
-    os.chdir(pth)
+def goto_problem(problemName, contest_path = Path()):
+    # os.chdir(pth)
     # subprocess.run(["code", pth + "/" + problemName + ".cpp"])
-    print(pth + "/" + problemName + ".cpp")
+    # command = f"cd {pth}; code {problemName + ".cpp"}"
+    # pyperclip.copy(command)
+    # print(f"command ({command}) copied! just paste + Enter")
+    pass
 
 if __name__ == '__main__':
     goto_problem("A")
